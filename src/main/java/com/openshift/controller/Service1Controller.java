@@ -13,6 +13,7 @@ import org.springframework.web.client.RestTemplate;
 
 
 @RestController
+@RequestMapping("/service-1")
 public class Service1Controller {
 
 	@Autowired
