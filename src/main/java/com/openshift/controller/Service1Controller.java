@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @RestController
-@RequestMapping("/service-1")
+@RequestMapping("/service1")
 public class Service1Controller {
 
 	@Autowired
