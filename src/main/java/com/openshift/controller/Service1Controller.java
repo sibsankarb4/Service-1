@@ -20,9 +20,9 @@ public class Service1Controller {
 	@Autowired
 	RestTemplate restTemplate;
 	
-	@Value("${service1.product_url}")
-        private String service1_product_url;
-	//String service1_product_url="https://service-2-sibsber1-23934.osc-sbx-exp-ap-56325c34021cf286d0e188cc291cdca2-0001.us-east.containers.appdomain.cloud/Service-2-v1/service2/products";
+	@Value("${service2.product-url}")
+        private String service2_product_url;
+	//String service2_product_url="https://service-2-sibsber1-23934.osc-sbx-exp-ap-56325c34021cf286d0e188cc291cdca2-0001.us-east.containers.appdomain.cloud/Service-2-v1/service2/products";
 	
 	@GetMapping("/info")
 	public String welcome() {
@@ -33,7 +33,7 @@ public class Service1Controller {
 	@RequestMapping(value = "/getProductsList", method = RequestMethod.GET)	
 	public List<Object> getProducts() {	 
 		
-	ResponseEntity<Object[]> response = restTemplate.getForEntity(service1_product_url, Object[].class);
+	ResponseEntity<Object[]> response = restTemplate.getForEntity(service2_product_url, Object[].class);
 	return Arrays.asList(response.getBody());
 	
 	}
