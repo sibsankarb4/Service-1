@@ -20,7 +20,9 @@ public class Service1Controller {
 	@Autowired
 	RestTemplate restTemplate;
 	
-	String service1_product_url="https://service-2-sibsber1-23934.osc-sbx-exp-ap-56325c34021cf286d0e188cc291cdca2-0001.us-east.containers.appdomain.cloud/Service-2-v1/service2/products";
+	@Value("${service1.product_url}")
+        private String service1_product_url;
+	//String service1_product_url="https://service-2-sibsber1-23934.osc-sbx-exp-ap-56325c34021cf286d0e188cc291cdca2-0001.us-east.containers.appdomain.cloud/Service-2-v1/service2/products";
 	
 	@GetMapping("/info")
 	public String welcome() {
