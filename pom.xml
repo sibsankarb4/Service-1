@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.openshift</groupId>
 	<artifactId>Service-1</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>v1</version>
 	<packaging>war</packaging>
 	<name>Service-1</name>
 	<description>Demo project Service-1 Spring Boot deploying in openshift</description>
